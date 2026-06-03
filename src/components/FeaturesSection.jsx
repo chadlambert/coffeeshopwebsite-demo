@@ -102,19 +102,20 @@ export default function FeaturesSection() {
             const progress = 1 - rect.bottom / (viewH + rect.height);
             const p = Math.max(0, Math.min(1, progress));
 
-            //each row moves at diffent speeds/direction based on scroll progress
-            // use total row width estimate to kepp things moving
+            // each row moves at diffent speeds direction based on scroll progress
+            // use total row width estimate to keep things moving
             const range = 600;
-            setOffsets({
+            setOffsets([
                 -p * range,
                 p * range - range,
                 -p * range * 0.7
-            });
+            ]);
         };
 
         handleScroll();
         window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
+    
     }, []);
 
     return (
@@ -126,4 +127,4 @@ export default function FeaturesSection() {
             </div>
         </section>
     );
-}
+};
