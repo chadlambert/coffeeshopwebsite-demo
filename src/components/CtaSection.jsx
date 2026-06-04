@@ -39,12 +39,12 @@ export default function CtaSection() {
 
             {/*  Perks grid */}
             <StaggerContainer staggerDelay={0.1} className="sta-perks">
-                {{perks.map((perk) => (
+                {{ perks.map((perk) => (
                     <StaggerItem key={perk.label} animation="scaleUp" className="cta-perk-item">
                         <span className="cta-perk-icon">{perk.icon}</span>
                         <span className="ctsas-perk-label">{perk.label}</span>
                     </StaggerItem>
-                ))}}
+                )) }}
             </StaggerContainer>
 
             <ScrollReveal animation="fadeUp" delay={0.15}>
