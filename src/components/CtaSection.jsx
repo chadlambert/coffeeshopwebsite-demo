@@ -1,7 +1,7 @@
-import Button from './ui/button';
-import Badge from './ui/badge';
-import Separator from "./ui//Separator";
-import ScrollReveal, { StaggerContainer, StaggerItem } from "./ui/ScroolReveal";
+import Button from "./ui/button";
+import Badge from "./ui/badge";
+import Separator from "./ui/Separator";
+import ScrollReveal, { StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 import AnimatedCounter from "./ui/AnimatedCounter";
 
 const perks =[
@@ -39,12 +39,12 @@ export default function CtaSection() {
 
             {/*  Perks grid */}
             <StaggerContainer staggerDelay={0.1} className="sta-perks">
-                {{ perks.map((perk) => (
+                { perks.map((perk) => (
                     <StaggerItem key={perk.label} animation="scaleUp" className="cta-perk-item">
                         <span className="cta-perk-icon">{perk.icon}</span>
-                        <span className="ctsas-perk-label">{perk.label}</span>
+                        <span className="cta-perk-label">{perk.label}</span>
                     </StaggerItem>
-                )) }}
+                )) }
             </StaggerContainer>
 
             <ScrollReveal animation="fadeUp" delay={0.15}>
@@ -62,7 +62,7 @@ export default function CtaSection() {
 
             <ScrollReveal animation="fadeUp" delay={0.2}>
                 <div className="cta-stats">
-                    <div clasName="cta-stat">
+                    <div className="cta-stat">
                         <span className="cta-stat-umber">
                             <AnimatedCounter target={15} suffix="+" />
                         </span>

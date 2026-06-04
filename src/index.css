@@ -1,6 +1,8 @@
 /* Tailwindcss v4 import */
-@import "tailwindcss";
-
+/* @import "tailwindcss"; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* ═══════════════════════════════════════════
    THE BEANS PLACE — DESIGN TOKENS
    ═══════════════════════════════════════════ */
