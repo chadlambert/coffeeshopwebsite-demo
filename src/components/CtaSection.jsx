@@ -1,52 +1,54 @@
-import Button from "./ui/button";
-import Badge from "./ui/badge";
+import Button from "./ui/Button";
+import Badge from "./ui/Badge";
 import Separator from "./ui/Separator";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "./ui/ScrollReveal";
 import AnimatedCounter from "./ui/AnimatedCounter";
-
-const perks =[
-{ icon: "🌱", label: "Ethically Sourced" },
+ 
+const perks = [
+    { icon: "🌱", label: "Ethically Sourced" },
     { icon: "🔥", label: "Freshly Roasted" },
     { icon: "🚚", label: "Free Shipping $50+" },
     { icon: "♻️", label: "Eco-Friendly Bags" }
 ];
+ 
 export default function CtaSection() {
     return (
         <div className="cta-section">
-            <ScrollReveal animation="fade-up" delay={0.1}>
-            <Badge variant="accent" className="mb-6">
-                ☕ Fresh Roasts Daily
-            </Badge>
+            <ScrollReveal animation="fadeUp" delay={0}>
+                <Badge variant="accent" className="mb-6">
+                    ☕ Fresh Roasts Daily
+                </Badge>
             </ScrollReveal>
-
-            <ScrollReveal animation="fade-up" delay={0.1}>
+ 
+            <ScrollReveal animation="fadeUp" delay={0.1}>
                 <h2>
                     Brewed With Passion,
                     <br />
                     Delivered Fresh
                 </h2>
             </ScrollReveal>
-
-            <ScrollReveal animation="fade-up" delay={0.2}>
+ 
+            <ScrollReveal animation="fadeIn" delay={0.2}>
                 <Separator className="mx-auto mb-6 max-w-48" />
             </ScrollReveal>
-
-            <ScrollReveal animation="fade-up" delay={0.2}>
+ 
+            <ScrollReveal animation="fadeUp" delay={0.2}>
                 <p className="cta-subtitle">
-                    
+                    Skip the line. Order premium single-origin coffee online and get it roasted to
+                    order. From our roastery to your doorstep in 1-2 business days.
                 </p>
             </ScrollReveal>
-
-            {/*  Perks grid */}
-            <StaggerContainer staggerDelay={0.1} className="sta-perks">
-                { perks.map((perk) => (
+ 
+            {/* Perks grid */}
+            <StaggerContainer staggerDelay={0.1} className="cta-perks">
+                {perks.map((perk) => (
                     <StaggerItem key={perk.label} animation="scaleUp" className="cta-perk-item">
                         <span className="cta-perk-icon">{perk.icon}</span>
                         <span className="cta-perk-label">{perk.label}</span>
                     </StaggerItem>
-                )) }
+                ))}
             </StaggerContainer>
-
+ 
             <ScrollReveal animation="fadeUp" delay={0.15}>
                 <div className="cta-buttons">
                     <Button variant="accent" size="lg">
@@ -57,16 +59,15 @@ export default function CtaSection() {
                     </Button>
                 </div>
             </ScrollReveal>
-
-            {/*  Stats Bar */}
-
+ 
+            {/* Stats bar */}
             <ScrollReveal animation="fadeUp" delay={0.2}>
                 <div className="cta-stats">
                     <div className="cta-stat">
-                        <span className="cta-stat-umber">
+                        <span className="cta-stat-number">
                             <AnimatedCounter target={15} suffix="+" />
                         </span>
-                        <span className="cta-stat-label">origins</span>
+                        <span className="cta-stat-label">Origins</span>
                     </div>
                     <div className="cta-stat-divider" />
                     <div className="cta-stat">
@@ -77,13 +78,15 @@ export default function CtaSection() {
                     </div>
                     <div className="cta-stat-divider" />
                     <div className="cta-stat">
-                         <span className="cta-stat-number">
-                            <AnimatedCounter target={48} suffix="+" />
+                        <span className="cta-stat-number">
+                            <AnimatedCounter target={48} suffix="hr" />
                         </span>
-                        <span className="cta-stat-label">Fresh Deliveries</span>
+                        <span className="cta-stat-label">Fresh Delivery</span>
                     </div>
                 </div>
             </ScrollReveal>
         </div>
     );
 }
+ 
+ 
